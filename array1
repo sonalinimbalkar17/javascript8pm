@@ -1,0 +1,186 @@
+//array==>an array is an object that can store a collection of items.(multiple element add)
+
+let marks=[50,60,70,80,90]
+console.log(marks)//[50,60,70,80,90]
+console.log(typeof marks)//object
+
+//properties of array
+//length==>no of elements present an array
+//number start with 1
+let marks2=[50,60,70,80,90]
+console.log(marks2.length)//5
+
+//array starts withs 0 index
+//index==>  0  1   2  3  4
+let marks3=[50,60,70,80,90]
+
+console.log(marks3[1])//60
+console.log(marks3[4])//90
+console.log(marks3[8])//undefined
+
+//length find for loops
+let marks4=[50,60,70,80,90]
+//forward loop
+for(let i=0;i<marks4.length;i++){
+    console.log(i)//0 1 2 3 4
+    console.log(marks4[i])//50 60 70 80 90
+}
+//reverse loop
+for(let i=marks4.length;i>=0;i--){
+    console.log(i)//4 3 2 1 0
+    console.log(marks4[i])//reverse print
+
+}
+
+//arrays methods()==>action and return types
+//types of methods
+//push()  unshift()  pop()   shift()  includes()  indexOf()  flat()   join()  reverse()
+//imp==>  map()  filter()  reduce()   forEach()   some()   every()
+//find()   findIndex()  slice()   splice()   fill()   at()   concat()
+
+//1.push()
+//ex 1
+let cities=['pune','mumbai','nashik','thane']
+a1=cities.push('aurangabad')
+console.log(a1)//5
+console.log(cities)//add element last
+
+//2.unshift()
+//ex 1
+let cities2=['pune','mumbai','nashik','thane']
+a2=cities2.unshift('gao')
+console.log(a2)//5
+console.log(cities2)//add element 1st
+
+//3.pop
+//ex 1
+let cities3=['pune','mumbai','nashik','thane']
+a3=cities3.pop()
+console.log(a3)///thane//remove last ele
+
+//4.shift
+//ex 1
+let cities4=['pune','mumbai','nashik','thane']
+a4=cities4.shift()
+console.log(a4)//pune//remove 1st el
+
+//5.includes
+//ex 1
+let cities5=['pune','mumbai','nashik','thane']
+let a5=cities5.includes('mumbai')
+console.log(a5)//true
+
+a6=cities5.includes('Mumbai')
+console.log(a6)//false
+
+//6.indexOf
+//ex 1
+let cities6=['pune','mumbai','nashik','thane']
+a7=cities6.indexOf('nashik')
+console.log(a7)//2
+a8=cities6.indexOf('gao')
+console.log(a8)//-1
+
+//7.flat
+//ex 1
+let num=[[10,20,30],[40,50],[60,70]]
+console.log(num.flat())//[10,20,30,40,50,60,70]
+
+//8.join
+//ex 1
+let cities7=['pune','mumbai','nashik','thane']
+let a9=cities7.join('#')
+console.log(a9)//pune#mumbai#nashik#thane
+
+//9.reverse
+//ex 1
+let cities8=['pune','mumbai','nashik','thane']
+console.log(cities8.reverse())
+
+//imp methods
+//10.map
+let numbers=[3,5,4,6,7,8,9]
+let b1=numbers.map(function(el,index,arr){
+    return el*2
+})
+console.log(b1)//[6,10,8,12,14,16,18]
+
+let b2=numbers.map(function(el,index,arr){
+    return el +5
+})
+console.log(b2)//8 10 9 11 12 13 14
+
+//11.filter()
+let mars=[40,30,55,77,38,70]
+let b3=mars.filter(function(el,index,arr){
+    return el>40
+})
+console.log(b3)//55,77,70
+
+//12.reduce
+
+let mrk=[11,22,33]
+let b4=mrk.reduce(function(acc,el,index,arr){
+    return acc + el
+},0)
+console.log(b4)//66
+
+
+//13.forEach
+let citiesA=['pune','mumbai','nashik']
+let b5=citiesA.forEach(function(el,index,arr){
+    console.log('welcome'+el)
+})
+
+//14.some
+let mrks=[40,60,99,88,66,55,50]
+let b6=mrks.some(function(el,index,arr){
+    return el>90
+})
+console.log(b6)//true
+
+//15.every
+let mrks2=[40,60,99,88,66,55,50]
+let b7=mrks2.every(function(el,index,arr){
+    return el>100
+})
+console.log(b7)//false
+
+//16.find==>print 1st el
+let mrks3=[33,44,55,66,77,88,99]
+let b8=mrks3.find(function(el,index,arr){
+    return el>55
+})
+console.log(b8)//66
+
+//17.findIndex
+let mrks4=[33,44,55,66,77,88,99]
+let b9=mrks4.findIndex(function(el,index,arr){
+    return el>60
+})
+console.log(b9)//3
+
+//18.slice
+let student=['sonali','kalyani','shweta','swati']
+let b10=student.slice(1)
+console.log(b10)
+
+console.log(student.slice(0,2))//sonali kalyani
+
+
+//19.splice
+let student2=['sonali','kalyani','shweta','swati']
+console.log(student2.splice(1,2,'shital','komal'))
+console.log(student2)
+
+//20.fill()
+let s=[22,55,44,33,66,10]
+console.log(s.fill(20,0,5))//20 20 20 20 20 10
+
+//21.at()
+let s2=[22,33,55,66,77]
+console.log(s2.at(3))//66
+
+//22.concat
+
+

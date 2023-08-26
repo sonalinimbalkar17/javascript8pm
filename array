@@ -1,0 +1,529 @@
+//array==>data type
+//use add to multiple element
+//define array
+//array element start with 0 index
+let arr=[10,20,30,40,50]
+//index==>0  1   2  3  4
+console.log(arr)//[10,20,30,40,50]
+console.log(typeof arr)//object
+
+
+//array==>present property and methods
+//property==>length(number)
+//methods()==>action and return
+
+//property==>length
+//length start with 1
+let student=['ram','sham','tina','sima']
+console.log(student.length)//4
+console.log(student[2])//tina
+console.log(student[0])//ram
+console.log(student[4])//undefined
+
+//methods()
+//action
+//return
+
+//types of arrays methods
+//1.push()==>add element at last
+//2.unshift()==>add element at first
+//3.pop()==>removed element at last
+//4.shift()==>removed element at first
+//5.indexOf()==>search element present output is index otherwise -1
+//6.includes()==>search element present output is true otherwise false
+//7.flat()==>multiple array create singal array
+//8.join()==>
+//9.reverse()==>
+//10.map()
+//11.filter()
+//12.reduce()
+//13.forEach()
+//14.some()
+//15.every()
+//16.find()
+//17.findIndex()
+//18.slice()
+//19.splice()
+//20.fill()
+//21.at()
+//22.concat()
+
+let a = 10
+console.log(a)//10
+
+//              0         1       2        3
+let names = ["chinmay","samay","sameer","sandeep"]
+console.log(names[0])//chinmay
+console.log(names[1])//samay
+
+// length
+console.log(names.length)//4
+for(let i = 0 ; i <= names.length-1 ; i++){
+    console.log(i)//0 1 2 3
+    console.log(names[i])//chinmay//samay//sameer//sandip
+    // i - 0 
+    // i - 1
+    // i - 2
+    // i - 3
+}
+
+for(let i = names.length -1 ;  i>= 0 ; i--){
+    console.log(i)//3 2 1 0
+    console.log(names[i])//reverse print
+}
+
+// Object 
+// Object --- properties and method
+
+let city = ["pune","banglore","mumbai","goa"]
+
+console.log(city.length)//4
+
+//method -   Gym()
+//action  -  excercise
+//return  -  muscles
+
+city = ["pune","banglore","mumbai","goa"]
+
+
+// method - push()
+// action - adds the element at last
+// return - new length of array
+
+let q1 = city.push("nagpur")
+console.log(q1)//5
+console.log(city)
+
+// method - unshift()
+// action - adds the element at first 
+// return - new length of array 
+
+let q2 = city.unshift('wardha')
+console.log(q2)//6
+console.log(city)
+
+// pop()
+// action - removes the last element
+// return - return  the same element
+
+let q3 = city.pop()
+console.log(q3)//
+console.log(city)
+
+
+// shift()
+let q4 = city.shift()
+console.log(q4)
+console.log(city)
+
+// includes()
+//action - search for element
+//if element found - return true else false
+
+let q5 = city.includes("Mumbai")//false
+let q6 = city.includes("mumbai")//true
+console.log(q5)//
+console.log(q6)
+console.log(city)
+
+let q7 = city.reverse()
+console.log(city)
+console.log(q7)
+
+//-----------------------------------------------------------------------------------
+// program 1
+//                 0     1   2    3
+let birthYears = [1989, 1990, 1991, 1992]
+let calAge = []
+//[34,33,32,31]
+
+
+for (let i = 0; i < birthYears.length; i++) {
+       console.log(i)//0 1 2 3
+       console.log(birthYears[i])//[1989,1990,1991,1992]
+    //    console.log(2023 -birthYears[i])
+    let x = 2023 - birthYears[i]
+    calAge.push(x)
+}
+console.log(calAge)//[34,33,32,31]
+
+// program 2
+//           0  1   2  3 4  5  6
+let marks = [22, 33, 44, 55, 22, 33, 66]
+let above40 = []
+// [44,55,66]
+for (let i = 0; i < marks.length; i++) {
+    console.log(i)//0 1 2 3 4 5 6
+    //console.log(marks[i])
+    if (marks[i] > 40) {
+        // console.log(marks[i])
+        above40.push(marks[i])
+    }
+}
+console.log(above40)//[44,55,66]
+
+
+// program 3
+//         0  1   2
+let mks = [11,22,33]  // 66
+let sum = 0
+
+for(let i = 0 ; i < mks.length ; i++){
+    //console.log(i)//0 1 2
+    //console.log(mks[i])//[11,22,33]
+    sum = sum + mks[i]
+    //     0  +   11   =====> 11
+    //     11 +   22   =====> 33
+    //     33 +   33   =====> 66
+}
+console.log(sum)//66
+
+// program 4
+
+let cities = ["pune","nagpur","wardha","nashik"]
+for(let i = 0 ; i < cities.length ; i++){
+   // console.log(i)//0 1 2 3
+   console.log("welcome "+cities[i])
+}
+//-------------------------------------------------------------------------------
+// program 1 
+let birthYears1 = [1989, 1990, 1991, 1992]
+let ages = []
+
+for (let i = 0; i < birthYears1.length; i++) {
+    //console.log(i)
+    //console.log(birthYears1[i])
+    let a = 2023 - birthYears1[i]
+    ages.push(a)
+}
+console.log(ages)//[34,33,32,31]
+
+// program 2
+//             0    1    2    3
+birthYears3 = [1989, 1990, 1991, 1992]
+let s = birthYears3.map(function (el, index, arr) {
+    return 2023 - el
+
+})
+console.log(s)//[34,33,32,31]
+
+// program 3
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let s1 = numbers.map(function (el, index, arr) {
+    return el * 2
+})
+console.log(s1)//2 4 6 8 10 12 14 16 18 20
+
+// program 4
+
+let marks1 = [11, 22, 33, 44, 55]
+let above30 = []
+
+for (let i = 0; i < marks1.length; i++) {
+    //console.log(marks1[i])//[11,22,33,44,55]
+    if (marks1[i] > 30) {
+        above30.push(marks1[i])
+    }
+}
+console.log(above30)//33,44,55
+
+
+let s2 = marks1.filter(function (el, index, arr) {
+    return el > 30
+})
+console.log(s2)//33 44 55
+
+
+// program 5
+
+let k = [11, 22, 33]
+let sum1 = 0
+for (let i = 0; i < k.length; i++) {
+    sum1 = sum1 + k[i]
+    //         0  +  11  ====> 11
+    //         11  +  22 ====> 33
+    //         33  +  33 =====> 66
+
+}
+console.log(sum1)//66
+let d1 = k.reduce(function(acc,el,index,arr){
+    return acc + el
+},0)
+console.log(d1)//66
+
+//------------------------------------------------------------------------------
+// program 1
+let numbers2 = [33,44,5,6,7,8,9,8]
+//[32,43,4,5,6,7,8,7]
+let d2 = numbers2.map(function(el,index,arr){
+    return el - 1
+})
+console.log(d2)
+
+// program 2
+let transactions = [44,55,25,-56,-78,99,-45]
+let d3 = transactions.filter(function(el,index,arr){
+    return el > 0
+})
+console.log(d3)
+
+let d4 = transactions.filter(function(el,index,arr){
+    return el < 0
+})
+console.log(d4)
+
+// program 3
+let deposit = d2.reduce(function(acc,el,index,arr){
+    return acc + el
+},0)
+console.log(deposit)//112
+
+let withdrawl = d2.reduce(function(acc,el,index,arr){
+    return acc + el
+},0)
+console.log(withdrawl)//112
+
+// program 4
+let cities2 = ["pune","nagpur","wardh"]
+
+let d5  =cities2.forEach(function(el,index,arr){
+    console.log("welcome "+ el)
+})
+console.log(d5)
+
+// program 5
+let marks3= [11,33,44,55,4,55,22,55,66,77]
+let d6 = marks3.filter(function(el,index,arr){
+    return el > 50
+})
+console.log(d6)//55 55 55 66 77
+
+// program 6
+let d7 = marks3.find(function(el,index,arr){
+    return el > 50
+})
+console.log(d7)//55
+
+// program 7
+let d8 = marks3.findIndex(function(el,index,arr){
+    return el > 50
+})
+console.log(d8)//3
+
+// program 8 
+
+let aa = [12,44,66,77,88,66,88,12,34]
+let q8 = aa.every(function(el,index,arr){
+    return el > 30
+})
+console.log(q8)//false
+
+// program 9
+let q9 = aa.some(function(el,index,arr){
+    return el > 300
+})
+console.log(q9)//false
+
+//----------------------------------------------------------------------------
+ let namesA = ["chinmay","sarika","poorva","komal"]
+ let r1 = namesA.reverse()
+console.log(r1)//[komal,poorva,sarika,chinmay]
+
+// // program 2
+ let citiesB = ["banglore", "kolkalta","nashik","chandrapur"]
+ let r2 =citiesB.sort()//charecter order
+console.log(r2)
+
+// // program 3
+// // flat()
+// //                0            1          2
+// //              0  1   2    0  1  2   0  1  2 
+ let numbersB = [[11,22,33],[44,55,66],[77,88,99]]
+ console.log(numbersB[1][2])//66
+ let r3 = numbers.flat()
+ console.log(r3)
+
+// // program 4
+
+ let m = [11,22,33]
+let n = [44,55,66]
+ let r4 = m.concat(n)
+ let r5 = n.concat(m)
+ console.log(r4)//[11,22,33,44,55,66]
+console.log(r5)//[44,55,66,11,22,33]
+
+// // program 5
+ let infoA = ["chinmay","deshpande",7709192441]
+ let r6 = infoA.join('-') // "chinmay-deshpande-7709192441"
+ let r7 = infoA.join('@')
+ let r8 = infoA.join(' ')
+ console.log(r6)
+ console.log(r7)
+console.log(r8)
+
+// // program 6 
+// //              0        1       2
+ let fruits2 = ["apple","mango","banana"]
+let r9 = fruits2.includes('Apple')
+ console.log(r9)//false
+
+
+ let r10 = fruits2.indexOf('banana')
+ let r11 = fruits2.indexOf('Banana')
+ console.log(r10)//2
+console.log(r11)//-1
+
+ let r12 = fruits2.at(6)
+ let r13  = fruits2[5]
+ console.log(r12)//undefined
+ console.log(r13)//undefined
+
+// // program 7
+// //                   0         1        2         3
+ let vegetables = ["cabbage","potato","tomato","brinjal"]
+ //vegetables.pop()
+ //vegetables.shift()
+//vegetables.splice(startingIndex,numberOfElementtoBeDeleted)
+
+// //vegetables.splice(1,2)
+// //vegetables.splice(1,1)
+
+vegetables.splice(2,2,"ladyfinger","carrot")
+ console.log(vegetables)
+
+// // program 8 (slice)
+
+
+// // program 9 (fill)
+
+
+let mkrs  = [35,40,45,77,88,25,30,15]
+
+// // [40,45,50,82,93,30,35,20]
+
+// // [40,45,50,82,93,35]
+
+let totalMrksofPassStudent = mkrs.map(function(el){
+    return el + 5
+}).filter(function(el,index,arr){
+     return el >= 35
+ }).reduce(function(acc,el,index ,arr){
+    return  acc + el
+ },0)
+
+ console.log(totalMrksofPassStudent)
+
+
+// // program 10
+
+// //               0       1         2        3           4        5
+ let cities3 = ["pune","mumbai","banglore","kolkata","chennai","nagpur"]
+// //               -6      -5      -4         -3          -2          -1
+// //cities3.slice(startIndex,EndIndex (not inclusive))
+ let q111 = cities3.slice(1)
+ console.log(q111)
+ console.log(cities3.slice(1,5))
+console.log(cities3.slice(-6,5))
+ console.log(cities3.slice(-1))
+console.log(cities3.slice(-5,-1))
+ console.log(cities3.slice(1,-1))
+ console.log(cities3.slice(-1,-2))
+
+// fill 
+//              0  1  2  3  4  5  6  7  8
+let numbersb = [11,22,33,44,55,66,77,88,99]
+//numbersb.fill("value",startindex,endIndex)
+let q122 = numbersb.fill("chinmay",2)
+let q123 = numbersb.fill("chinmay",2,numbersb.length-1)
+console.log(q123)
+
+let h = [22,33,44,55]
+h.reverse()
+console.log(h)
+
+//==========================================================================
+//imp methods array
+//map()  //filter()   //reduce()    //forEach()  //find()   //finfIndex()   //some()    //every()
+
+//map()
+let BirthYears=[1989,1990,1991,1992]
+let t1=BirthYears.map(function(el,index,arr){
+    return 2023-el
+})
+console.log(t1)//[34,33,32,31]
+
+//filter()//filterout given condition
+
+let mrks=[12,33,44,55,66,77]
+let t2=mrks.filter(function(el ,index,arr){
+    return el>30
+})
+console.log(t2)//[33 44 55 66 77]
+
+//reduce()==>addition all elements
+
+let Num=[11,22,33]
+let t3=Num.reduce(function(acc,el,index,arr){
+     return acc+el
+},0)
+console.log(t3)//66
+
+//forEach()==>passed argument after join element
+let Cities=['pune','mumbai','nashik']
+let t4=Cities.forEach(function(el,index,arr){
+    console.log('welcome'+ el)
+})
+
+//find()==>first element print
+ let Num2=[1,12,3,44,5]
+    let t5=Num2.find(function(el,index,arr){
+        return el>10
+    })
+    console.log(t5)//12
+
+//findIndex()==>print present 1st element index
+ let Num3=[1,12,3,44,5]
+ let t6=Num3.findIndex(function(el,index,arr){
+    return el>10
+ })
+ console.log(t6)//1
+
+//some()==>print some elments present output is true
+let Num4=[66,71,88,99,89,7]
+let t7= Num4.some(function(el,index,arr){
+    return el>70
+})
+console.log(t7)//true
+
+//every()//print every element present output is true outerwise 
+let t8=Num4.every(function(el,index,arr){
+    return el>70
+})
+console.log(t8)//false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

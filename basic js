@@ -1,0 +1,469 @@
+//variables
+//data types
+//arithmetic operation
+//function
+//comparision operator
+//logical operator
+//conditional statement
+//loop
+
+
+
+
+
+
+//variables
+//1.let
+let x = 50
+console.log(x)
+
+let p = 37
+console.log(p)
+//update
+p = 66
+console.log(p)
+
+//2.consatnt
+const a = 100
+console.log(a)
+
+//data types
+//1.number
+let s = 50
+console.log(s)
+console.log(typeof s)
+
+//2.string
+let student = "sonali"
+console.log(typeof student)
+
+let name = 'poonam'
+console.log(typeof name)
+
+//3.boolean
+let r = true
+console.log(typeof r)
+
+let k = false
+console.log(typeof k)
+
+//arithmetic operation(+,-,*./,%)
+let z = 40
+let q = 5
+console.log(z + q)
+console.log(z - q)
+console.log(z * q)
+console.log(z / q)
+console.log(z % q)
+
+let c = 10
+let d = 5
+
+console.log(c + d)
+console.log(c - d)
+console.log(c * d)
+console.log(c / d)
+console.log(c % d)
+//function//avoide repetation
+function Calculator(m, n) {
+    console.log(m + n)
+    console.log(m - n)
+    console.log(m * n)
+    console.log(m / n)
+    console.log(m % n)
+}
+Calculator(4, 5)
+
+//function without parameter and without return type
+function add() {
+    console.log(9 + 9)
+}
+add()
+add()
+add()
+
+//function with para and without return type
+function add1(e, f) {
+    console.log(e + f)
+}
+add1(20, 5)
+add1(4, 80)
+add1(20, 10)
+
+function mul(g, h) {
+    console.log(g * h)
+}
+mul(5, 3)
+mul(10, 10)
+
+//function with para and with return type
+function sub(k, l) {
+    return k - l
+}
+let a1 = sub(30, 5)
+console.log(a1)//25
+console.log(a1 - a1)//0
+console.log(a1 + 5)//30
+
+//function types
+//1.function declartion
+function add(x, y) {
+    return x + y
+}
+let a2 = add(60, 5)
+console.log(a2)
+
+//2.function expression
+
+let sub2 = function (a, b) {
+    return a - b
+}
+a3 = sub2(50, 10)
+console.log(a3)
+console.log(a3 - 10)
+
+//3.arrow function
+let add3 = (c, d) => {
+    return c + d
+}
+a4 = add3(66, 55)
+console.log(a4)
+console.log(a4 - 100)
+
+
+//comparision operator
+//<,>,<=,>=,!=,===,!==
+//== ==>only chack value //===  ==> chack value and data type
+console.log(22 === 22)//true
+console.log(22 !== 22)//false
+console.log(22 !== '22')//true
+console.log(22 == '22')//true
+console.log(22 != '22')//false
+console.log(22 === '22')//false
+console.log(23 > 3)//true
+console.log(3 >= 3)//true
+console.log(3 <= 3)//true
+console.log(7 >= 4)//true
+console.log(8 >= 8)//true
+console.log(8 <= 8)//true
+
+//logical operator
+//AND,OR,NOT
+//AND-----&&
+//T && T=T
+//T && F=F
+//F && T=F
+//F && F=F
+console.log(6 == 6 && 7 == 7) //t && t=T
+console.log(6 != 6 && 7 != 7)//f && f=f
+console.log(6 == 6 && 7 != 7)//t && f=f
+console.log(6 != 6 && 7 == 7)//f && t=f
+
+//OR----||
+//T || T=T
+//T || F=T
+//F||T=T
+//F ||F=F
+
+console.log(6 == 6 || 7 == 7)//t
+console.log(6 != 6 || 7 != 7)//f
+console.log(6 == 6 || 7 != 7)//t
+console.log(6 != 6 || 7 == 7)//t
+
+//NOT---!
+//true - false
+//false -true
+console.log(!(7 === '7'))//!f==>t
+console.log(!(7 == '7'))//!t==>f
+
+//conditional statement
+//if
+//if else(trenary oprator)
+//if else if
+//switch case
+
+//1.if
+let numT = 5
+
+if (numT > 0 && numT <= 5) {
+    console.log("10% discount")//true
+}
+if (numT > 5 && numT <= 10) {
+    console.log("20% discount")
+}
+if (numT > 10) {
+    console.log("30% discount")
+}
+
+//if else if
+
+if (numT > 0 && numT <= 5) {
+    console.log("10% discount")//true
+}
+else if (numT > 5 && numT <= 10) {
+    console.log("20% discount")
+}
+else if (numT > 10) {
+    console.log("30% discount")
+}
+else {
+    console.log('incorrect input')
+}
+//if
+let marks = 90
+if (marks > 85) {
+    console.log('Grade A')//true
+}
+if (marks > 75) {
+    console.log('Grade B')//true
+}
+if (marks > 65) {
+    console.log('Grade C')//true
+}
+//2.if else if==> only chack firstly true condition that way stop hare
+
+if (marks > 85) {
+    console.log('Grade A')//true
+}
+else if (marks > 75) {
+    console.log('Grade B')
+}
+else if (marks > 65) {
+    console.log('Grade C')
+}
+else {
+    console.log('fail try again')
+}
+
+//3.if else(tenary operator)
+let j1 = 10
+let j2 = 5
+
+if (j1 > j2) {
+    console.log('j1 is greter')//true
+}
+else {
+    console.log('j2 is greter')
+}
+
+//tenary operator
+j1 > j2 ? console.log('j1 is greater') : console.log('j2 is greater')
+
+//4.switch case
+//switch case without break statement
+
+let city = 'jaipur'
+switch (city) {
+    case 'pune':
+        console.log('MH')
+    case 'bhopal':
+        console.log('MP')
+    case 'luknow':
+        console.log('UP')
+    case 'jaipur':
+        console.log('RJ')//true
+    default:
+        console.log('incorrect name')
+}
+//switch case with break statement
+//program 2
+let city2 = "goa"
+switch (city2) {
+    case 'pune':
+        console.log('MH')
+        break
+    case 'jaipur':
+        console.log('RJ')
+        break
+    case 'lucknow':
+        console.log('UP')
+        break
+    case 'bhopal':
+        console.log('MP')
+        break
+    default:
+        console.log('incorrect cityName')//output
+}
+
+let city3 = 'indore'
+switch (city3) {
+    case 'pune':
+    case 'nagpur':
+        console.log('MH')
+        break
+    case 'jaipur':
+    case 'udaipur':
+        console.log('RJ')
+        break
+    case 'lucknow':
+    case 'varanasi':
+        console.log('UP')
+        break
+    case 'bhopal':
+    case 'indore':
+        console.log('MP')//true
+        break
+    default:
+        console.log('incorrect cityname')
+}
+
+//days
+//without break
+let day = 'day2'
+switch (day) {
+    case 'day1':
+        console.log("sunday")
+    case 'day2':
+        console.log("monday")
+    case 'day3':
+        console.log("friday")
+    default:
+        console.log(false)
+}
+//switch case with break
+let Day = 'day2'
+switch (day) {
+    case 'day1':
+        console.log("sunday")
+        break
+    case 'day2':
+        console.log("monday")//true
+        break
+    case 'day3':
+        console.log("friday")
+        break
+    default:
+        console.log(false)
+}
+
+//loop
+//for loop
+
+//for(intialization;conditionChack;increment/decrement){
+    //statements
+//}
+
+//print 1 to 5
+for(let i=1;i<=5;i++){
+    console.log(i)//1 2 3 4 5
+    console.log('hello')
+}
+
+//print 0 to 3
+for( let i=0;i<=3;i++){
+    console.log(i)//0 1 2 3 
+}
+//print 5 to 1
+for(let i=5;i>=1;i--){
+    console.log(i)//5 4 3 2 1
+}
+
+//print table of 2
+for (let i=2;i<=20;i=i+2){
+    console.log(i)//2 4 6 8....
+}
+
+//print table of 3 in reverse
+for( let i=30;i>=3;i=i-3){
+    console.log(i)//30 27 24 21....
+}
+
+//break statament with loop
+
+for(let i=1;i<=5;i++){//2//3
+    if(i==3){//1//2
+        break
+    }
+    console.log(i)//1 2
+}
+
+for(let i=1;i<=5;i++){
+    console.log(i)//1 2 3
+    if(i==3){
+        break
+    }
+}
+//reverse
+for(let i=5;i>=1;i--){
+    console.log(i)//5 4 3
+    if(i==3){
+        break
+    }
+}
+
+//while loop
+//inialization
+//while(condition){
+//statement
+//increment/decrement
+//}
+
+//print 1 to 5 using while
+let i1=1
+while(i1<=5){
+    console.log(i1)//1 2 3 4 5
+    i1++;
+}
+
+//print hello 5 times
+let b=1
+while(b<=5){
+    console.log('hello')
+    b++;
+}
+
+//print 1 to 3
+let b1=1
+while(b1<=3){
+    console.log(b1)//1 2 3
+    b1++;
+}
+//print 5 to 1
+let b2=5
+while(b2>=1){
+    console.log(b2)//5 4 3 2 1
+    b2--;
+}
+
+//table of 2
+let b3=2
+while(b3<=20){
+    console.log(b3)//2 4 6 8 10 12 14 16 18 20
+    b3=b3+2;
+}
+
+//table of 5 in reverse
+let b4=50
+while(b4>=5){
+    console.log(b4)//50 45 40 35 30 ....
+    b4=b4-5
+}
+
+//break statement with while
+let k1=1
+while(k1<=5){
+    if(k1==3){
+        break
+    }
+    console.log(k1)//1 2
+    k1++;
+}
+
+let k2=1
+while(k2<=5){
+    console.log(k2)//1 2 3
+    
+    if(k2==3){
+        break
+    }
+    k2++;
+}
+
+let k3=1
+while(k3<=5){
+    if(k3==2){
+        continue
+    }
+    console.log(k3)//1
+    k3++;
+}
